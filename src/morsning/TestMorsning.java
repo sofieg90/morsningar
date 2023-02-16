@@ -14,8 +14,8 @@ public class TestMorsning {
 
         morse.setText("a");
 
-        String expected = ".-";
-        String actual = morse.getText();
+        String expected = ".- ";
+        String actual = morse.getMorse();
 
         assertEquals(expected, actual);
 
@@ -29,8 +29,8 @@ public class TestMorsning {
 
         morse.setText("b");
 
-        String expected = "-...";
-        String actual = morse.getText();
+        String expected = "-... ";
+        String actual = morse.getMorse();
 
         assertEquals(expected, actual);
     }
@@ -38,12 +38,13 @@ public class TestMorsning {
     @Test
 
     public void getMorseToC() {
+
         Morsning morse = new Morsning();
 
         morse.setText("-.-.");
 
-        String expected = "c";
-        String actual = morse.getText();
+        String expected = "c ";
+        String actual = morse.getAlfa();
 
         assertEquals(expected, actual);
 
@@ -56,8 +57,21 @@ public class TestMorsning {
 
         morse.setText("hi");
 
-        String expected = ".... ..";
-        String actual = morse.getText();
+        String expected = ".... .. ";
+        String actual = morse.getMorse();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+
+    public void morseToHi() {
+        Morsning morse = new Morsning();
+
+        morse.setText(".... ..");
+
+        String expected = "hi";
+        String actual = morse.getAlfa();
 
         assertEquals(expected, actual);
     }

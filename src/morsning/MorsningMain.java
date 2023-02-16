@@ -8,17 +8,15 @@ public class MorsningMain {
 
         Scanner scan = new Scanner(System.in);
 
-        String word;
+        String wordis;
 
 
         Morsning mors = new Morsning();
-        System.out.println("Hello! Please write something and I will translate it to morse:");
+        System.out.println("Hello! Please write something and I will translate it:");
 
 
-                word = scan.nextLine();
+            wordis = scan.nextLine();
 
-
-
-        mors.setText(word);
+            mors.setText(wordis);
     }
 }
