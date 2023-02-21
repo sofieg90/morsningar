@@ -20,6 +20,8 @@ public class Morsning {
                 "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
 
         text = "";
+        output = "";
+        output2 = "";
 
 
     }
@@ -28,47 +30,47 @@ public class Morsning {
 
         text = input;
 
-        System.out.print("translate " + text + ": ");
+        if (text.isEmpty()) {
+            System.out.println("You need to write something!");
+        } else {
+
+            System.out.println("translate " + text + ": ");
 
             for (int i = 0; i < text.length(); i++) {
                 for (int j = 0; j < alfa.length; j++) {
                     if (text.charAt(i) == alfa[j]) {
                         System.out.print(morse[j] + " ");
-                        output = morse[j] + " ";
-
-                        break;
-                    }
-                }
-            }
-                String[] word = text.split(" ");
-
-                for (int i = 0; i < word.length; i++) {
-                    for (int j = 0; j < morse.length; j++) {
-                        if (word[i].compareTo(morse[j]) == 0) {
-                            System.out.print(alfa[j] + " ");
-                            output2 = alfa[j] + " ";
-                            break;
-                        }
+                        output += morse[j] + " ";
                     }
                 }
 
-
             }
 
-    public String getText() {
 
-        return text;
+            String[] word = text.split(" ");
+
+            for (int i = 0; i < word.length; i++) {
+                for (int j = 0; j < morse.length; j++) {
+                    if (word[i].compareTo(morse[j]) == 0) {
+                        System.out.print(alfa[j] + " ");
+                        output2 += alfa[j] + " ";
+                    }
+                }
+            }
+        }
     }
 
-    public String getMorse() {
 
-        return output;
+
+        public String getMorse () {
+
+            return output;
+        }
+
+
+        public String getAlfa () {
+
+            return output2;
+        }
+
     }
-
-
-    public String getAlfa() {
-
-        return output2;
-    }
-
-}

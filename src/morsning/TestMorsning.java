@@ -43,7 +43,7 @@ public class TestMorsning {
 
         morse.setText("-.-.");
 
-        String expected = "c ";
+        String expected = "c";
         String actual = morse.getAlfa();
 
         assertEquals(expected, actual);
