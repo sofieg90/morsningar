@@ -61,16 +61,15 @@ public class Morsning {
     }
 
 
+    public String getMorse() {
 
-        public String getMorse () {
-
-            return output;
-        }
-
-
-        public String getAlfa () {
-
-            return output2;
-        }
-
+        return output;
     }
+
+
+    public String getAlfa() {
+
+        return output2;
+    }
+
+}

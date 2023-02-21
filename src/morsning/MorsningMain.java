@@ -13,36 +13,34 @@ public class MorsningMain {
         int number = 0;
 
 
-            System.out.println("Hello and welcome! Please press '1' to continue: ");
-            System.out.println("(If you are done, you can just write 'stop')");
-        while (true) {
-
-            try {
-                number = Integer.parseInt(scan.nextLine());
-
-                break;
-
-            } catch (Exception e) {
-                System.out.println("Invalid number! PLease klick number 1 to continue: ");
-            }
-        }
-        if (number == 1) {
-            System.out.println("Write what you want to translate - in english or morse code: ");
-        }
-
+        System.out.println("Hello and welcome! Please press '1' to continue: ");
 
         while (true) {
-            wordis = scan.nextLine();
+            number = Integer.parseInt(scan.nextLine());
 
-            if (wordis.equals("stop")) {
-                System.out.println("Thank you for your time. Bye!");
-                break;
+            if (number != 1) {
+                System.out.println("Invalid number! PLease click number 1 to continue: ");
+
+            } else {
+                System.out.println("Write what you want to translate - in english or morse code: ");
+                System.out.println("(If you are done, you can just write 'stop')");
+
+
+                while (true) {
+                    wordis = scan.nextLine();
+
+                    if (wordis.equals("stop")) {
+                        System.out.println("Thank you for your time. Bye!");
+                        break;
+                    }
+                    mors.setText(wordis);
+                }
+
+
             }
-            mors.setText(wordis);
         }
-
-
     }
 }
+
 
 
