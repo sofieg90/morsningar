@@ -43,7 +43,7 @@ public class TestMorsning {
 
         morse.setText("-.-.");
 
-        String expected = "c";
+        String expected = "c ";
         String actual = morse.getAlfa();
 
         assertEquals(expected, actual);
@@ -55,7 +55,7 @@ public class TestMorsning {
     public void sayHi() {
         Morsning morse = new Morsning();
 
-        morse.setText("hi");
+        morse.setText("hi ");
 
         String expected = ".... .. ";
         String actual = morse.getMorse();
@@ -70,7 +70,7 @@ public class TestMorsning {
 
         morse.setText(".... ..");
 
-        String expected = "hi";
+        String expected = "h i ";
         String actual = morse.getAlfa();
 
         assertEquals(expected, actual);
